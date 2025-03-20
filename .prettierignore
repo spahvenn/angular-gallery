@@ -1,0 +1,34 @@
+# Dependencies
+node_modules
+dist
+
+# Build output
+.angular
+build
+
+# Coverage reports
+coverage
+
+# IDE files
+.idea
+.vscode
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Package manager files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Generated files
+*.generated.ts
+*.generated.html
+*.generated.scss
+
+# Angular specific
+.angular/cache
+.angular/cache/**/* 
