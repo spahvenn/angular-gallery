@@ -2,10 +2,10 @@
 
 html {
   color-scheme: light;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
   @include mat.theme(
     (
       color: mat.$azure-palette,
-      typography: Roboto,
       density: 0,
     )
   );
