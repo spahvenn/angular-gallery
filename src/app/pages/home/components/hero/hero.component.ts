@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
-import {FadeInImgComponent} from '../../../../components/fade-in-img';
+import { NgOptimizedImage } from '@angular/common';
+import { FadeInDirective } from '../../../../directives/fade-in.directive';
 
 @Component({
   selector: 'app-hero',
   standalone: true,
   imports: [
-    FadeInImgComponent
+    NgOptimizedImage,
+    FadeInDirective
   ],
   templateUrl: './hero.component.html',
   styleUrl: './hero.component.scss'

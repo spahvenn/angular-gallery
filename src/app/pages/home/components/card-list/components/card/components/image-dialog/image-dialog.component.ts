@@ -5,7 +5,8 @@ import {
   MatDialogContent,
   MatDialogRef,
 } from '@angular/material/dialog';
-import { FadeInImgComponent } from '../../../../../../../../components/fade-in-img';
+import { NgOptimizedImage } from '@angular/common';
+import { FadeInDirective } from '../../../../../../../../directives/fade-in.directive';
 
 export interface DialogData {
   imgUrl: string;
@@ -14,7 +15,7 @@ export interface DialogData {
 @Component({
   selector: 'app-image-dialog',
   standalone: true,
-  imports: [MatDialogContent, MatDialogActions, FadeInImgComponent],
+  imports: [MatDialogContent, MatDialogActions, NgOptimizedImage, FadeInDirective],
   templateUrl: './image-dialog.component.html',
   styleUrl: './image-dialog.component.scss',
 })

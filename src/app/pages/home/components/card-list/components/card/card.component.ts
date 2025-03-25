@@ -1,5 +1,6 @@
 import { Component, inject, Input } from '@angular/core';
-import { FadeInImgComponent } from '../../../../../../components/fade-in-img';
+import { NgOptimizedImage } from '@angular/common';
+import { FadeInDirective } from '../../../../../../directives/fade-in.directive';
 import { ImageDialogComponent } from './components/image-dialog/image-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
 
@@ -7,7 +8,7 @@ import { MatDialog } from '@angular/material/dialog';
   selector: 'app-card',
   standalone: true,
   templateUrl: './card.component.html',
-  imports: [FadeInImgComponent],
+  imports: [NgOptimizedImage, FadeInDirective],
   styleUrl: './card.component.scss',
 })
 export class CardComponent {
