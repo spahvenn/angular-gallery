@@ -3,6 +3,16 @@
   padding: 0;
   cursor: pointer;
   display: block;
+  overflow: hidden;
+
+  .image-wrapper {
+    display: block;
+    transition: transform 0.5s ease;
+    
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
 
   img {
     width: 100%;
