@@ -7,6 +7,8 @@ import {
 } from '@angular/material/dialog';
 import { NgOptimizedImage } from '@angular/common';
 import { FadeInDirective } from '../../../../../../../../directives/fade-in.directive';
+import { ShoppingCartButtonComponent } from './components/shopping-cart-button/shopping-cart-button.component';
+import { MatButton } from '@angular/material/button';
 
 export interface DialogData {
   imgUrl: string;
@@ -15,7 +17,14 @@ export interface DialogData {
 @Component({
   selector: 'app-image-dialog',
   standalone: true,
-  imports: [MatDialogContent, MatDialogActions, NgOptimizedImage, FadeInDirective],
+  imports: [
+    MatDialogContent,
+    MatDialogActions,
+    NgOptimizedImage,
+    FadeInDirective,
+    ShoppingCartButtonComponent,
+    MatButton,
+  ],
   templateUrl: './image-dialog.component.html',
   styleUrl: './image-dialog.component.scss',
 })
