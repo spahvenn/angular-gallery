@@ -1,4 +1,4 @@
-import { Component, inject, model } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import {
   MAT_DIALOG_DATA,
   MatDialogActions,
@@ -6,7 +6,6 @@ import {
   MatDialogRef,
 } from '@angular/material/dialog';
 import { NgOptimizedImage } from '@angular/common';
-import { FadeInDirective } from '../../../../../../../../directives/fade-in.directive';
 import { ShoppingCartButtonComponent } from './components/shopping-cart-button/shopping-cart-button.component';
 import { MatButton } from '@angular/material/button';
 
@@ -21,7 +20,6 @@ export interface DialogData {
     MatDialogContent,
     MatDialogActions,
     NgOptimizedImage,
-    FadeInDirective,
     ShoppingCartButtonComponent,
     MatButton,
   ],

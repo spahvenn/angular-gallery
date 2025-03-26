@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { CartService } from '../../../../../../../../../../services/cart-service.service';
 
@@ -10,13 +10,11 @@ import { CartService } from '../../../../../../../../../../services/cart-service
   styleUrl: './shopping-cart-button.component.scss',
 })
 export class ShoppingCartButtonComponent {
-  // TODO: Change this to actual image in the dialog
-  imageUrl = 'https://example.com/product-image.jpg';
+  @Input() imageUrl!: string;
 
   constructor(private cartService: CartService) {}
 
   addToCart() {
-    console.log('added to cart');
     this.cartService.addToCart(this.imageUrl);
   }
 }
