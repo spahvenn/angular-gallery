@@ -8,9 +8,10 @@ import {
 import { NgOptimizedImage } from '@angular/common';
 import { ShoppingCartButtonComponent } from './components/shopping-cart-button/shopping-cart-button.component';
 import { MatButton } from '@angular/material/button';
+import { StoreItem } from '../../../../../../../../directives/store-items';
 
 export interface DialogData {
-  imgUrl: string;
+  storeItem: StoreItem;
 }
 
 @Component({
@@ -29,7 +30,7 @@ export interface DialogData {
 export class ImageDialogComponent {
   readonly dialogRef = inject(MatDialogRef<ImageDialogComponent>);
   readonly data = inject<DialogData>(MAT_DIALOG_DATA);
-  readonly imgUrl = this.data.imgUrl;
+  readonly storeItem = this.data.storeItem;
 
   onCloseClick(): void {
     this.dialogRef.close();

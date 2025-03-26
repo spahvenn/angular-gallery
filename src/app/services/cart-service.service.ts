@@ -2,11 +2,11 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
   private storageKey = 'shoppingCart';
-  private cartSubject = new BehaviorSubject<string[]>([]);
+  private cartSubject = new BehaviorSubject<number[]>([]);
   cart$ = this.cartSubject.asObservable(); // exposed observable for UI
 
   constructor() {
@@ -15,18 +15,18 @@ export class CartService {
     this.cartSubject.next(cart);
   }
 
-  private saveAndEmit(cart: string[]) {
+  private saveAndEmit(cart: number[]) {
     this.cartSubject.next(cart);
     localStorage.setItem(this.storageKey, JSON.stringify(cart));
   }
 
-  addToCart(imageUrl: string) {
-    const updated = [...this.cartSubject.value, imageUrl];
+  addToCart(id: number) {
+    const updated = [...this.cartSubject.value, id];
     this.saveAndEmit(updated);
   }
 
-  removeFromCart(imageUrl: string) {
-    const updated = this.cartSubject.value.filter(url => url !== imageUrl);
+  removeFromCart(id: number) {
+    const updated = this.cartSubject.value.filter(storeItemId => storeItemId !== id);
     this.saveAndEmit(updated);
   }
 

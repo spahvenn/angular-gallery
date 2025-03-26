@@ -1,15 +1,14 @@
 import { Component } from '@angular/core';
-import {CardComponent} from './components/card/card.component';
+import { CardComponent } from './components/card/card.component';
+import { STORE_ITEMS } from '../../../../directives/store-items';
 
 @Component({
   selector: 'app-card-list',
   standalone: true,
   templateUrl: './card-list.component.html',
-  imports: [
-    CardComponent
-  ],
-  styleUrl: './card-list.component.scss'
+  imports: [CardComponent],
+  styleUrl: './card-list.component.scss',
 })
 export class CardListComponent {
-  imageNumbers = Array.from({ length: 14 }, (_, i) => i + 1);
+  storeItems = STORE_ITEMS;
 }

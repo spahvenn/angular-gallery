@@ -1,5 +1,5 @@
 <div class="card-grid">
-  @for (num of imageNumbers; track num) {
-    <app-card [imgUrl]="'front-page-image-list/' + num + '.jpg'"></app-card>
+  @for (storeItem of storeItems; track storeItem.id) {
+    <app-card [storeItem]="storeItem"></app-card>
   }
 </div>

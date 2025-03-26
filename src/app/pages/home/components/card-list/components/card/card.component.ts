@@ -3,6 +3,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { FadeInDirective } from '../../../../../../directives/fade-in.directive';
 import { ImageDialogComponent } from './components/image-dialog/image-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
+import { StoreItem } from '../../../../../../directives/store-items';
 
 @Component({
   selector: 'app-card',
@@ -14,14 +15,14 @@ import { MatDialog } from '@angular/material/dialog';
 export class CardComponent {
   readonly dialog = inject(MatDialog);
 
-  @Input() imgUrl!: string;
+  @Input() storeItem!: StoreItem;
 
   openDialog(): void {
     const dialogRef = this.dialog.open(ImageDialogComponent, {
-      data: { imgUrl: this.imgUrl },
+      data: { storeItem: this.storeItem },
       maxWidth: '1200px',
       width: '100%',
-      panelClass: 'image-dialog-container'
+      panelClass: 'image-dialog-container',
     });
 
     dialogRef.afterClosed().subscribe(result => {

@@ -10,7 +10,7 @@ import { CartService } from '../../../../services/cart-service.service';
   styleUrl: './header-shopping-cart.component.scss',
 })
 export class HeaderShoppingCartComponent {
-  cartItems: string[] = [];
+  cartItems: number[] = [];
 
   constructor(private cartService: CartService) {}
 
