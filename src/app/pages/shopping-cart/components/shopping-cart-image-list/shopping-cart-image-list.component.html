@@ -1,0 +1,5 @@
+<div class="card-grid">
+  @for (cartItem of cartItems; track cartItem.id) {
+    <app-card [storeItem]="cartItem"></app-card>
+  }
+</div>
