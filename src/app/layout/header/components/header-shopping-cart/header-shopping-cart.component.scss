@@ -1,6 +1,14 @@
-.container {
+:host {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+a {
   display: flex;
   align-items: center;
+  padding: 8px;
+  text-decoration: none;
 }
 
 .icon {

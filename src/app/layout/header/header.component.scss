@@ -1,24 +1,19 @@
 header {
-  padding: 20px;
   background-color: var(--mat-sys-primary);
   border-bottom: 1px solid #dee2e6;
+  padding: 0 24px;
 }
 
 nav {
   display: flex;
-  gap: 1rem;
   max-width: 1280px;
   margin: 0 auto;
 }
 
-.shopping-cart-container {
-  width: 100%;
-  display: flex;
-  justify-content: end;
-}
-
 a {
+  display: block;
   text-decoration: none;
   color: white;
   font-size: 20px;
+  padding: 16px 16px 16px 0px;
 }
