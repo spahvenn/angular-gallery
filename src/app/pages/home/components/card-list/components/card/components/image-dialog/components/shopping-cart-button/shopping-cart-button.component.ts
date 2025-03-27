@@ -2,6 +2,7 @@ import { Component, Input } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { CartService } from '../../../../../../../../../../services/cart-service.service';
 import { StoreItem } from '../../../../../../../../../../directives/store-items';
+import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-shopping-cart-button',
@@ -14,7 +15,10 @@ export class ShoppingCartButtonComponent {
   private cartItemIds: number[] = [];
   @Input() storeItem!: StoreItem;
 
-  constructor(private cartService: CartService) {}
+  constructor(
+    private cartService: CartService,
+    private dialogRef: MatDialogRef<ShoppingCartButtonComponent>
+  ) {}
 
   ngOnInit(): void {
     this.cartService.cart$.subscribe(cartItemIds => {
@@ -32,5 +36,6 @@ export class ShoppingCartButtonComponent {
     } else {
       this.cartService.addToCart(this.storeItem.id);
     }
+    this.dialogRef.close();
   }
 }
