@@ -30,12 +30,14 @@ export class ShoppingCartButtonComponent {
     return this.cartItemIds.includes(this.storeItem.id);
   }
 
-  toggleCart() {
+  async toggleCart() {
+    this.dialogRef.close();
+    // Add a small delay to ensure the button text does change before dialog is closed
+    await new Promise(resolve => setTimeout(resolve, 100));
     if (this.isInCart()) {
       this.cartService.removeFromCart(this.storeItem.id);
     } else {
       this.cartService.addToCart(this.storeItem.id);
     }
-    this.dialogRef.close();
   }
 }
