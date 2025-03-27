@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {NgOptimizedImage} from '@angular/common';
+import { PageContentContainerComponent } from '../../layout/page-content-container/page-content-container.component';
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [],
+  imports: [PageContentContainerComponent],
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
 })
