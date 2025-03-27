@@ -1,1 +1,3 @@
-<button mat-button (click)="addToCart()">Add to shopping cart</button>
+<button mat-button (click)="toggleCart()">
+  {{ isInCart() ? 'Remove from shopping cart' : 'Add to shopping cart' }}
+</button>

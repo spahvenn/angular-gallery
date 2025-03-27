@@ -11,11 +11,26 @@ import { StoreItem } from '../../../../../../../../../../directives/store-items'
   styleUrl: './shopping-cart-button.component.scss',
 })
 export class ShoppingCartButtonComponent {
+  private cartItemIds: number[] = [];
   @Input() storeItem!: StoreItem;
 
   constructor(private cartService: CartService) {}
 
-  addToCart() {
-    this.cartService.addToCart(this.storeItem.id);
+  ngOnInit(): void {
+    this.cartService.cart$.subscribe(cartItemIds => {
+      this.cartItemIds = cartItemIds;
+    });
+  }
+
+  isInCart(): boolean {
+    return this.cartItemIds.includes(this.storeItem.id);
+  }
+
+  toggleCart() {
+    if (this.isInCart()) {
+      this.cartService.removeFromCart(this.storeItem.id);
+    } else {
+      this.cartService.addToCart(this.storeItem.id);
+    }
   }
 }
