@@ -1,0 +1,31 @@
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.next-button-container, .prev-button-container {
+  position: relative;
+}
+
+.next-button {
+  position: absolute;
+  right: 16px;
+}
+
+.prev-button {
+  position: absolute;
+  left: 16px;
+  z-index: 1;
+}
+
+.carousel-item {
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+

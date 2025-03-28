@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
-import { MatButton, MatFabButton } from '@angular/material/button';
-import { MatIcon } from '@angular/material/icon';
+import { MatButton } from '@angular/material/button';
 
 @Component({
   selector: 'app-checkout-button',
   standalone: true,
-  imports: [MatButton, MatIcon, MatFabButton],
+  imports: [MatButton],
   templateUrl: './checkout-button.component.html',
   styleUrl: './checkout-button.component.scss',
 })
