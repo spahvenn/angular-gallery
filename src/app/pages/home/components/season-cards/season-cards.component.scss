@@ -1,9 +1,10 @@
 .container {
   display: grid;
-  gap: 16px;
+  gap: 6px;
   grid-template-columns: repeat(2, 1fr);
 
   @media (min-width: 1024px) {
+    gap: 16px;
     grid-template-columns: repeat(4, 1fr);
   }
 }

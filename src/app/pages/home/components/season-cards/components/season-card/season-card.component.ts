@@ -12,6 +12,7 @@ import { MatAnchor } from '@angular/material/button';
 export class SeasonCardComponent {
   @Input() title!: string;
   @Input() description!: string;
+  @Input() descriptionMobile!: string;
   @Input() imageUrl!: string;
   @Input() imageAlt!: string;
 }

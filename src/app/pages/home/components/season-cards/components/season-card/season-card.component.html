@@ -1,8 +1,11 @@
-<div><img [ngSrc]="imageUrl" width="1600" height="900" [alt]="imageAlt" /></div>
+<div>
+  <a href="gallery"><img [ngSrc]="imageUrl" width="1600" height="900" [alt]="imageAlt" /></a>
+</div>
 <div class="text-container">
   <div class="title">{{ title }}</div>
   <div class="description">{{ description }}</div>
+  <div class="description-mobile">{{ descriptionMobile }}</div>
   <div class="button-container">
-    <a mat-flat-button>BROWSE THE COLLECTION</a>
+    <a href="gallery" class="view-gallery-link" mat-flat-button>VIEW GALLERY</a>
   </div>
 </div>
