@@ -11,7 +11,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header-shopping-cart.component.scss',
 })
 export class HeaderShoppingCartComponent {
-  cartItems: number[] = [];
+  cartItems: string[] = [];
 
   constructor(private cartService: CartService) {}
 

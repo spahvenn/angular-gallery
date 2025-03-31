@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CardComponent } from './components/card/card.component';
-import { STORE_ITEMS } from '../../../../directives/store-items';
+import { STORE_ITEMS_SUMMER } from '../../../../data/store-items';
 
 @Component({
   selector: 'app-card-list',
@@ -10,5 +10,5 @@ import { STORE_ITEMS } from '../../../../directives/store-items';
   styleUrl: './card-list.component.scss',
 })
 export class CardListComponent {
-  storeItems = STORE_ITEMS;
+  storeItems = STORE_ITEMS_SUMMER;
 }

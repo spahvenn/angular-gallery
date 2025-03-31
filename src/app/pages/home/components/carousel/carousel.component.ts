@@ -15,20 +15,21 @@ export class CarouselComponent {
   currentIndex = 0;
 
   slides = [
+    { img: 'front-page/summer.jpg', title: 'Slide', description: '' },
     {
-      img: 'store-item-images/1.jpg',
-      title: 'Slide 1',
-      description: 'This is the first slide',
+      img: 'front-page/autumn.jpg',
+      title: 'Slide',
+      description: '',
     },
     {
-      img: 'store-item-images/2.jpg',
-      title: 'Slide 2',
-      description: 'Here comes the second one!',
+      img: 'front-page/winter.jpg',
+      title: 'Slide',
+      description: '',
     },
     {
-      img: 'store-item-images/3.jpg',
-      title: 'Slide 3',
-      description: 'And the final slide',
+      img: 'front-page/spring.jpg',
+      title: 'Slide',
+      description: '',
     },
   ];
 

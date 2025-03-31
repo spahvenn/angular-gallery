@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatButton } from '@angular/material/button';
 import { CartService } from '../../../../../../../../../../services/cart-service.service';
-import { StoreItem } from '../../../../../../../../../../directives/store-items';
+import { StoreItem } from '../../../../../../../../../../data/store-items';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
@@ -12,7 +12,7 @@ import { MatDialogRef } from '@angular/material/dialog';
   styleUrl: './shopping-cart-button.component.scss',
 })
 export class ShoppingCartButtonComponent {
-  private cartItemIds: number[] = [];
+  private cartItemIds: string[] = [];
   @Input() storeItem!: StoreItem;
 
   constructor(

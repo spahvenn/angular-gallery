@@ -3,7 +3,7 @@ import { NgOptimizedImage } from '@angular/common';
 import { FadeInDirective } from '../../../../../../directives/fade-in.directive';
 import { ImageDialogComponent } from './components/image-dialog/image-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
-import { StoreItem } from '../../../../../../directives/store-items';
+import { StoreItem } from '../../../../../../data/store-items';
 
 @Component({
   selector: 'app-card',

@@ -8,7 +8,7 @@ import {
 import { NgOptimizedImage } from '@angular/common';
 import { ShoppingCartButtonComponent } from './components/shopping-cart-button/shopping-cart-button.component';
 import { MatButton } from '@angular/material/button';
-import { StoreItem } from '../../../../../../../../directives/store-items';
+import { StoreItem } from '../../../../../../../../data/store-items';
 
 export interface DialogData {
   storeItem: StoreItem;

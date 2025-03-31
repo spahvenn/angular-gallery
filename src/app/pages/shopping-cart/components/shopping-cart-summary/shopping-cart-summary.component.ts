@@ -10,7 +10,7 @@ import { CheckoutButtonComponent } from './components/checkout-button/checkout-b
   styleUrl: './shopping-cart-summary.component.scss',
 })
 export class ShoppingCartSummaryComponent {
-  protected cartItems: number[] = [];
+  protected cartItems: string[] = [];
 
   constructor(private cartService: CartService) {}
 
