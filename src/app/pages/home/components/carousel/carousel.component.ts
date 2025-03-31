@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { MatCard } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 import { MatIconButton } from '@angular/material/button';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [MatCard, MatIcon, MatIconButton],
+  imports: [MatCard, MatIcon, MatIconButton, NgOptimizedImage],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })
