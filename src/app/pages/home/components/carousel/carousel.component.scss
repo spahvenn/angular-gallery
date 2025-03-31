@@ -2,9 +2,12 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  max-height: 70vh;
+  overflow: hidden;
 }
 
-.next-button-container, .prev-button-container {
+.next-button-container,
+.prev-button-container {
   position: relative;
 }
 
@@ -23,9 +26,8 @@
   width: 100%;
   img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
     display: block;
   }
 }
-
-
