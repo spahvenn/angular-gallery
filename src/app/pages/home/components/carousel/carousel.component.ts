@@ -45,12 +45,16 @@ export class CarouselComponent {
   next() {
     if (this.currentIndex < this.slides.length - 1) {
       this.currentIndex++;
+    } else {
+      this.currentIndex = 0;
     }
   }
 
   previous() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
+    } else {
+      this.currentIndex = this.slides.length - 1;
     }
   }
 }
