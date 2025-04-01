@@ -1,19 +1,29 @@
 <div class="carousel-container">
-
   <div class="prev-button-container">
-    <button mat-icon-button class="prev-button" (click)="previous()" [disabled]="currentIndex === 0">
+    <button
+      mat-icon-button
+      class="prev-button"
+      (click)="previous()"
+      [disabled]="currentIndex === 0"
+    >
       <mat-icon>chevron_left</mat-icon>
     </button>
   </div>
 
   <mat-card class="carousel-item">
-    <img [ngSrc]="slides[currentIndex].img" alt="carousel image" height="900" width="1600" />
+    <a [href]="slides[currentIndex].href">
+      <img [ngSrc]="slides[currentIndex].img" alt="carousel image" height="900" width="1600" />
+    </a>
   </mat-card>
 
   <div class="next-button-container">
-    <button mat-icon-button class="next-button" (click)="next()" [disabled]="currentIndex === slides.length - 1">
+    <button
+      mat-icon-button
+      class="next-button"
+      (click)="next()"
+      [disabled]="currentIndex === slides.length - 1"
+    >
       <mat-icon>chevron_right</mat-icon>
     </button>
   </div>
-
 </div>
