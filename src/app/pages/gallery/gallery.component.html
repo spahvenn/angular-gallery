@@ -1,3 +1,5 @@
 <app-page-content-container>
-  <div>hello gallery</div>
+  <app-season-selector [selectedSeason]="selectedSeason" (seasonChange)="onSeasonChange($event)">
+  </app-season-selector>
+  <app-gallery-images [selectedSeason]="selectedSeason"></app-gallery-images>
 </app-page-content-container>
