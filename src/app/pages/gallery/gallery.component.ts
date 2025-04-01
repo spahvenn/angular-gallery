@@ -12,7 +12,7 @@ import { Season } from '../../types/season.type';
   styleUrls: ['./gallery.component.scss'],
 })
 export class GalleryComponent {
-  selectedSeason: Season = 'Summer';
+  selectedSeason: Season = 'All';
 
   onSeasonChange(season: Season) {
     this.selectedSeason = season;

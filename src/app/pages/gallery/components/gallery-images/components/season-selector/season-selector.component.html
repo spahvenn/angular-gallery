@@ -1,8 +1,10 @@
-<div>
-  <label id="season-select-label">Pick your favorite season</label>
-</div>
-<mat-radio-group aria-labelledby="season-select-label" [ngModel]="selectedSeason" (change)="onSeasonChange($event.value)">
+<label id="season-select-label">Filter images by season</label>
+<mat-radio-group
+  aria-labelledby="season-select-label"
+  [ngModel]="selectedSeason"
+  (change)="onSeasonChange($event.value)"
+>
   @for (season of seasons; track season) {
-    <mat-radio-button class="example-radio-button" [value]="season">{{ season }}</mat-radio-button>
+    <mat-radio-button [value]="season">{{ season }}</mat-radio-button>
   }
 </mat-radio-group>

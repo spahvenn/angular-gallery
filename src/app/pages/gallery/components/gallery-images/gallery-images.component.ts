@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { Season } from '../../../../types/season.type';
 import {
+  STORE_ITEMS,
   STORE_ITEMS_AUTUMN,
   STORE_ITEMS_SPRING,
   STORE_ITEMS_SUMMER,
@@ -18,11 +19,15 @@ import { CardComponent } from '../../../../components/card/card.component';
 })
 export class GalleryImagesComponent implements OnChanges {
   @Input() selectedSeason!: Season;
-  selectedSeasonStoreItems: StoreItem[] = STORE_ITEMS_SUMMER;
+  selectedSeasonStoreItems: StoreItem[] = STORE_ITEMS;
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['selectedSeason']) {
       switch (this.selectedSeason) {
+        case 'All': {
+          this.selectedSeasonStoreItems = STORE_ITEMS;
+          break;
+        }
         case 'Spring':
           this.selectedSeasonStoreItems = STORE_ITEMS_SPRING;
           break;

@@ -11,10 +11,10 @@ import { Season } from '../../../../../../types/season.type';
   styleUrl: './season-selector.component.scss',
 })
 export class SeasonSelectorComponent {
-  @Input() selectedSeason: Season = 'Spring';
+  @Input() selectedSeason: Season = 'All';
   @Output() seasonChange = new EventEmitter<Season>();
 
-  seasons: Season[] = ['Spring', 'Summer', 'Autumn', 'Winter'];
+  seasons: Season[] = ['All', 'Spring', 'Summer', 'Autumn', 'Winter'];
 
   onSeasonChange(season: Season) {
     this.seasonChange.emit(season);
