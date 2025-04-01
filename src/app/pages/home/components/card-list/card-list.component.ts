@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CardComponent } from './components/card/card.component';
+import { CardComponent } from '../../../../components/card/card.component';
 import { STORE_ITEMS_SUMMER } from '../../../../data/store-items';
 
 @Component({

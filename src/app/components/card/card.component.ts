@@ -1,9 +1,9 @@
 import { Component, inject, Input } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
-import { FadeInDirective } from '../../../../../../directives/fade-in.directive';
+import { FadeInDirective } from '../../directives/fade-in.directive';
 import { ImageDialogComponent } from './components/image-dialog/image-dialog.component';
 import { MatDialog } from '@angular/material/dialog';
-import { StoreItem } from '../../../../../../data/store-items';
+import { StoreItem } from '../../data/store-items';
 
 @Component({
   selector: 'app-card',

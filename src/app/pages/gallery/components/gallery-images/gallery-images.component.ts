@@ -7,7 +7,7 @@ import {
   STORE_ITEMS_WINTER,
   StoreItem,
 } from '../../../../data/store-items';
-import { CardComponent } from '../../../home/components/card-list/components/card/card.component';
+import { CardComponent } from '../../../../components/card/card.component';
 
 @Component({
   selector: 'app-gallery-images',

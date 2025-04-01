@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CartService } from '../../../../services/cart-service.service';
-import { CardComponent } from '../../../home/components/card-list/components/card/card.component';
+import { CardComponent } from '../../../../components/card/card.component';
 import { STORE_ITEMS, StoreItem } from '../../../../data/store-items';
 
 @Component({

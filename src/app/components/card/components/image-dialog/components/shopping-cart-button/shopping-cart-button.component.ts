@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { CartService } from '../../../../../../../../../../services/cart-service.service';
-import { StoreItem } from '../../../../../../../../../../data/store-items';
+import { CartService } from '../../../../../../services/cart-service.service';
+import { StoreItem } from '../../../../../../data/store-items';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
