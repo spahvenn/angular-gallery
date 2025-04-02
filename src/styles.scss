@@ -2,7 +2,7 @@
 
 html {
   color-scheme: light;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
   @include mat.theme(
     (
       color: mat.$azure-palette,
@@ -12,7 +12,7 @@ html {
 }
 
 html {
-  background-color: var(--mat-sys-primary)
+  background-color: var(--mat-sys-primary);
 }
 
 body {
@@ -25,4 +25,8 @@ body {
   .mat-mdc-dialog-container {
     margin: 8px;
   }
+}
+
+.cdk-overlay-dark-backdrop {
+  background: rgba(0, 0, 0, 0.7) !important;
 }
