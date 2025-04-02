@@ -6,5 +6,6 @@ import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.compo
 export const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'gallery', component: GalleryComponent },
+  { path: 'gallery/:season', component: GalleryComponent },
   { path: 'shopping-cart', component: ShoppingCartComponent },
 ];
