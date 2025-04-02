@@ -1,5 +1,5 @@
 <div class="toast-container">
-  @for (toast of toasts; track toast.message) {
+  @for (toast of toasts; track toast.id) {
     <div class="toast" [ngClass]="[toast.type || 'info', toast.exiting ? 'exit' : '']">
       {{ toast.message }}
     </div>

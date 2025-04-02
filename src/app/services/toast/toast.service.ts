@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
 
 export interface Toast {
+  id: number;
   message: string;
   type?: 'success' | 'error' | 'info' | 'warning';
   duration?: number;
@@ -14,9 +15,10 @@ export interface Toast {
 })
 export class ToastService {
   private toastSubject = new Subject<Toast>();
+  private nextId = 0;
   toast$ = this.toastSubject.asObservable();
 
-  show(toast: Toast) {
-    this.toastSubject.next(toast);
+  show(toast: Omit<Toast, 'id'>) {
+    this.toastSubject.next({ ...toast, id: this.nextId++ });
   }
 }
