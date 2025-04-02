@@ -1,0 +1,7 @@
+<div class="toast-container">
+  @for (toast of toasts; track toast.message) {
+    <div class="toast" [ngClass]="[toast.type || 'info', toast.exiting ? 'exit' : '']">
+      {{ toast.message }}
+    </div>
+  }
+</div>

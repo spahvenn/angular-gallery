@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
-import { CartService } from '../../../../services/cart-service.service';
+import { CartService } from '../../../../services/cart/cart.service';
 import { RouterLink } from '@angular/router';
 
 @Component({

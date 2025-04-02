@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 export class CartService {
   private storageKey = 'shoppingCart';
   private cartSubject = new BehaviorSubject<string[]>([]);
-  cart$ = this.cartSubject.asObservable(); // exposed observable for UI
+  cart$ = this.cartSubject.asObservable();
 
   constructor() {
     const savedCart = localStorage.getItem(this.storageKey);

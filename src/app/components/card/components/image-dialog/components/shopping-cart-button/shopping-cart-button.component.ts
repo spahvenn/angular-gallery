@@ -1,8 +1,9 @@
 import { Component, Input } from '@angular/core';
 import { MatButton } from '@angular/material/button';
-import { CartService } from '../../../../../../services/cart-service.service';
+import { CartService } from '../../../../../../services/cart/cart.service';
 import { StoreItem } from '../../../../../../data/store-items';
 import { MatDialogRef } from '@angular/material/dialog';
+import { ToastService } from '../../../../../../services/toast/toast.service';
 
 @Component({
   selector: 'app-shopping-cart-button',
@@ -17,7 +18,8 @@ export class ShoppingCartButtonComponent {
 
   constructor(
     private cartService: CartService,
-    private dialogRef: MatDialogRef<ShoppingCartButtonComponent>
+    private dialogRef: MatDialogRef<ShoppingCartButtonComponent>,
+    private toastService: ToastService
   ) {}
 
   ngOnInit(): void {
@@ -36,8 +38,10 @@ export class ShoppingCartButtonComponent {
     await new Promise(resolve => setTimeout(resolve, 100));
     if (this.isInCart()) {
       this.cartService.removeFromCart(this.storeItem.id);
+      this.toastService.show({ type: 'success', message: 'Photo removed from the shopping cart' });
     } else {
       this.cartService.addToCart(this.storeItem.id);
+      this.toastService.show({ type: 'success', message: 'Photo added to the shopping cart' });
     }
   }
 }
