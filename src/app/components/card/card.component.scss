@@ -8,7 +8,7 @@
   .image-wrapper {
     display: block;
     transition: transform 0.5s ease;
-    
+
     &:hover {
       transform: scale(1.2);
     }
@@ -18,5 +18,28 @@
     width: 100%;
     height: auto;
     display: block;
+  }
+}
+
+.cart-text-container {
+  position: relative;
+}
+
+.cart-text {
+  position: absolute;
+  z-index: 1;
+  top: 4px;
+  right: 4px;
+  background-color: white;
+  border-radius: 4px;
+  padding: 4px 8px;
+  cursor: pointer;
+  @media (min-width: 600px) {
+    top: 8px;
+    right: 8px;
+  }
+  @media (min-width: 1280px) {
+    top: 12px;
+    right: 12px;
   }
 }

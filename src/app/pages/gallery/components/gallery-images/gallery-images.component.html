@@ -1,5 +1,5 @@
 <div class="container">
   @for (selectedSeasonStoreItem of selectedSeasonStoreItems; track selectedSeasonStoreItem.id) {
-    <app-card [storeItem]="selectedSeasonStoreItem"></app-card>
+    <app-card [storeItem]="selectedSeasonStoreItem" [showInCartLabel]="true"></app-card>
   }
 </div>
