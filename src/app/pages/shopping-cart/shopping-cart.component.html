@@ -1,7 +1,14 @@
-<app-page-content-container>
-  <app-shopping-cart-image-list></app-shopping-cart-image-list>
-  <div class="image-list-spacer"></div>
-  <hr/>
-  <div class="image-list-spacer"></div>
-  <app-shopping-cart-summary></app-shopping-cart-summary>
-</app-page-content-container>
+<div class="page-container">
+  <h1>Shopping Cart</h1>
+  <div *ngIf="cartItemIds.length === 0">
+    <p>Your Shopping cart is empty.</p>
+    <p>Please browse the <a href="gallery">gallery</a> to add items to your shopping cart.</p>
+  </div>
+  <div *ngIf="cartItemIds.length > 0">
+    <app-shopping-cart-image-list></app-shopping-cart-image-list>
+    <div class="image-list-spacer"></div>
+    <hr />
+    <div class="image-list-spacer"></div>
+    <app-shopping-cart-summary></app-shopping-cart-summary>
+  </div>
+</div>

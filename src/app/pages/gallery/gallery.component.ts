@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { PageContentContainerComponent } from '../../layout/page-content-container/page-content-container.component';
 import { GalleryImagesComponent } from './components/gallery-images/gallery-images.component';
 import { SeasonSelectorComponent } from './components/gallery-images/components/season-selector/season-selector.component';
 import { Season } from '../../types/season.type';
@@ -8,7 +7,7 @@ import { Season } from '../../types/season.type';
 @Component({
   selector: 'app-gallery',
   standalone: true,
-  imports: [PageContentContainerComponent, GalleryImagesComponent, SeasonSelectorComponent],
+  imports: [GalleryImagesComponent, SeasonSelectorComponent],
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.scss'],
 })
