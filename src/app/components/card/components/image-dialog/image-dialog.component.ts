@@ -1,10 +1,5 @@
 import { Component, inject } from '@angular/core';
-import {
-  MAT_DIALOG_DATA,
-  MatDialogActions,
-  MatDialogContent,
-  MatDialogRef,
-} from '@angular/material/dialog';
+import { MAT_DIALOG_DATA, MatDialogActions, MatDialogRef } from '@angular/material/dialog';
 import { NgOptimizedImage } from '@angular/common';
 import { ShoppingCartButtonComponent } from './components/shopping-cart-button/shopping-cart-button.component';
 import { MatButton } from '@angular/material/button';
@@ -17,13 +12,7 @@ export interface DialogData {
 @Component({
   selector: 'app-image-dialog',
   standalone: true,
-  imports: [
-    MatDialogContent,
-    MatDialogActions,
-    NgOptimizedImage,
-    ShoppingCartButtonComponent,
-    MatButton,
-  ],
+  imports: [MatDialogActions, NgOptimizedImage, ShoppingCartButtonComponent, MatButton],
   templateUrl: './image-dialog.component.html',
   styleUrl: './image-dialog.component.scss',
 })
