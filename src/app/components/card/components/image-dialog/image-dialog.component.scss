@@ -4,15 +4,39 @@
 }
 
 img {
-  max-width: 100%;
+  /* Minus the height of the action area */
+  max-height: calc(90vh - 57px);
+  width: auto;
   height: auto;
   display: block;
 }
 
+::ng-deep .mat-mdc-dialog-container {
+  max-width: 100%;
+  max-height: 90vh;
+  width: fit-content;
+}
+
 ::ng-deep .mdc-dialog--open .mat-mdc-dialog-surface {
   border-radius: 0;
+  overflow: hidden;
 }
 
 ::ng-deep .mat-mdc-dialog-container-with-actions .mat-mdc-dialog-content {
   padding: 0;
+}
+
+::ng-deep .mat-mdc-dialog-container .mat-mdc-dialog-surface {
+  height: fit-content;
+  max-height: 90vh;
+}
+
+::ng-deep .cdk-overlay-pane {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+::ng-deep .mat-mdc-dialog-actions {
+  padding: 8px 16px;
 }
