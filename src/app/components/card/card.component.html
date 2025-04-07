@@ -3,6 +3,6 @@
 </div>
 <button class="button" (click)="openDialog()">
   <div class="image-wrapper">
-    <img [ngSrc]="storeItem.imagePath + storeItem.imageName" width="1600" height="900" appFadeIn />
+    <img [ngSrc]="storeItem.imageName" width="1600" height="900" [sizes]="imgSizes" appFadeIn />
   </div>
 </button>

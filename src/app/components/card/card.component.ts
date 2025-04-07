@@ -18,6 +18,7 @@ export class CardComponent {
   protected cartItemIds!: string[];
   @Input() storeItem!: StoreItem;
   @Input() showInCartLabel = false;
+  @Input({ required: true }) imgSizes!: string;
 
   constructor(private cartService: CartService) {}
 

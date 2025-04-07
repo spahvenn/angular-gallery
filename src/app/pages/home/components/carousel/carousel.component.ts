@@ -14,21 +14,21 @@ export class CarouselComponent {
   currentIndex = 0;
 
   slides = [
-    { img: 'front-page/summer.jpg', title: 'Slide', description: '', href: 'gallery' },
+    { img: 'summer_jxiic8.jpg', title: 'Slide', description: '', href: 'gallery' },
     {
-      img: 'front-page/autumn.jpg',
+      img: 'autumn_xck5ls.jpg',
       title: 'Slide',
       description: '',
       href: 'gallery',
     },
     {
-      img: 'front-page/winter.jpg',
+      img: 'winter_aexj06.jpg',
       title: 'Slide',
       description: '',
       href: 'gallery',
     },
     {
-      img: 'front-page/spring.jpg',
+      img: 'spring_ny5alk.jpg',
       title: 'Slide',
       description: '',
       href: 'gallery',

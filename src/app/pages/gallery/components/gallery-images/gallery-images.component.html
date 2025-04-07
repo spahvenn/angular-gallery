@@ -1,5 +1,9 @@
 <div class="container">
   @for (selectedSeasonStoreItem of selectedSeasonStoreItems; track selectedSeasonStoreItem.id) {
-    <app-card [storeItem]="selectedSeasonStoreItem" [showInCartLabel]="true"></app-card>
+    <app-card
+      [storeItem]="selectedSeasonStoreItem"
+      [showInCartLabel]="true"
+      imgSizes="(max-width: 600px) 50vw, (max-width: 900px) 33vw, 25vw"
+    ></app-card>
   }
 </div>

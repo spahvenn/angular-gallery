@@ -1,5 +1,8 @@
 <div class="card-grid">
   @for (cartItem of cartItems; track cartItem.id) {
-    <app-card [storeItem]="cartItem"></app-card>
+    <app-card
+      [storeItem]="cartItem"
+      imgSizes="(max-width: 900px) 50vw, (max-width: 1200px) 25vw, (max-width: 1600px) 18.75vw, 16vw"
+    ></app-card>
   }
 </div>

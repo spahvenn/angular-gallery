@@ -7,7 +7,13 @@
 
   <mat-card class="carousel-item">
     <a [href]="slides[currentIndex].href">
-      <img [ngSrc]="slides[currentIndex].img" alt="carousel image" height="900" width="1600" />
+      <img
+        [ngSrc]="slides[currentIndex].img"
+        alt="carousel image"
+        height="900"
+        width="1600"
+        sizes="(max-width: 1200px) 100vw, (max-width: 1600px) 75vw, 70vw"
+      />
     </a>
   </mat-card>
 
