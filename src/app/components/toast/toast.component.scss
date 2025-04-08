@@ -13,21 +13,39 @@
 }
 
 .toast {
+  position: relative;
+  background-color: white;
   font-size: 16px;
   padding: 16px;
   border-radius: 4px;
-  color: white;
   min-width: 200px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
   animation: slideInRight 0.3s ease forwards;
 }
 
-.toast.success {
-  background-color: #4caf50;
-}
-
 .toast.exit {
   animation: slideOutLeft 0.3s ease forwards;
+}
+
+.close-icon-button {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: black;
+  border: 0;
+  background-color: inherit;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  font-size: 18px;
+}
+
+p {
+  padding-right: 32px;
 }
 
 @keyframes slideInRight {

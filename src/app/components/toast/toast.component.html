@@ -1,7 +1,15 @@
 <div class="toast-container">
   @for (toast of toasts; track toast.id) {
-    <div class="toast" [ngClass]="[toast.type || 'info', toast.exiting ? 'exit' : '']">
-      {{ toast.message }}
+    <div class="toast" [ngClass]="['info', toast.exiting ? 'exit' : '']">
+      <button class="close-icon-button" style="" aria-label="Close" (click)="removeToast(toast)">
+        <mat-icon class="icon">close</mat-icon>
+      </button>
+      <p class="mat-body">{{ toast.message }}</p>
+      <div *ngIf="!isShoppingCartPage()">
+        <button mat-flat-button (click)="onGoToCartButtonClick()">
+          <mat-icon>east</mat-icon> Go to cart
+        </button>
+      </div>
     </div>
   }
 </div>
