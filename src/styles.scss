@@ -3,6 +3,7 @@
 html {
   color-scheme: light;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
+  background-color: var(--mat-sys-primary);
   @include mat.theme(
     (
       color: mat.$azure-palette,
@@ -11,9 +12,16 @@ html {
   );
 }
 
-html {
-  background-color: var(--mat-sys-primary);
-}
+@include mat.typography-hierarchy(
+  mat.define-theme(
+    (
+      typography: (
+        use-system-variables: true,
+        system-variables-prefix: mat-sys,
+      ),
+    )
+  )
+);
 
 body {
   background: var(--mat-sys-surface);
@@ -29,8 +37,4 @@ body {
 
 .cdk-overlay-dark-backdrop {
   background: rgba(0, 0, 0, 0.7) !important;
-}
-
-p {
-  margin: 1rem 0;
 }

@@ -38,10 +38,10 @@ export class ShoppingCartButtonComponent {
     await new Promise(resolve => setTimeout(resolve, 100));
     if (this.isInCart()) {
       this.cartService.removeFromCart(this.storeItem.id);
-      this.toastService.show({ type: 'success', message: 'Photo removed from the shopping cart' });
+      this.toastService.show({ type: 'success', message: 'Photo removed from the shopping cart.' });
     } else {
       this.cartService.addToCart(this.storeItem.id);
-      this.toastService.show({ type: 'success', message: 'Photo added to the shopping cart' });
+      this.toastService.show({ type: 'success', message: 'Photo added to the shopping cart.' });
     }
   }
 }
