@@ -1,9 +1,29 @@
 <header>
   <nav aria-label="Main">
     <ul>
-      <li><a routerLink="/">Home</a></li>
-      <li><a routerLink="/gallery">Gallery</a></li>
-      <li class="shopping-cart-container"><app-header-shopping-cart></app-header-shopping-cart></li>
+      <li>
+        <a
+          routerLink="/"
+          routerLinkActive="active-nav-item"
+          #rla1="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [attr.aria-current]="rla1.isActive ? 'page' : null"
+          ><span>Home</span></a
+        >
+      </li>
+      <li>
+        <a
+          routerLink="/gallery"
+          routerLinkActive="active-nav-item"
+          #rla2="routerLinkActive"
+          [routerLinkActiveOptions]="{ exact: true }"
+          [attr.aria-current]="rla2.isActive ? 'page' : null"
+          ><span>Gallery</span></a
+        >
+      </li>
+      <li class="shopping-cart-container" routerLinkActive="active-nav-item">
+        <app-header-shopping-cart></app-header-shopping-cart>
+      </li>
     </ul>
   </nav>
 </header>

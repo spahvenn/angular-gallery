@@ -1,4 +1,11 @@
-<a routerLink="/shopping-cart" aria-label="Shopping cart">
+<a
+  routerLink="/shopping-cart"
+  aria-label="Shopping cart"
+  routerLinkActive="active-nav-item"
+  #rla="routerLinkActive"
+  [routerLinkActiveOptions]="{ exact: true }"
+  [attr.aria-current]="rla.isActive ? 'page' : null"
+>
   <mat-icon class="icon">shopping_cart</mat-icon>
   <span class="item-count" aria-hidden="true">{{ cartItems.length }}</span>
 </a>
