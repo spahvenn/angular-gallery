@@ -14,6 +14,6 @@ export class SeasonCardComponent {
   @Input() description!: string;
   @Input() descriptionMobile!: string;
   @Input() imageUrl!: string;
-  @Input() imageAlt!: string;
   @Input() linkUrl!: string;
+  @Input() linkAriaLabel!: string;
 }
