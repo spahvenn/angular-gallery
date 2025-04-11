@@ -1,4 +1,8 @@
-<div *ngIf="showInCartLabel && cartItemIds.includes(storeItem.id)" class="cart-text-container">
+<div
+  *ngIf="showInCartLabel && cartItemIds.includes(storeItem.id)"
+  class="cart-text-container"
+  aria-hidden="true"
+>
   <span class="cart-text" (click)="openDialog()">In cart</span>
 </div>
 <button class="button" (click)="openDialog()">
