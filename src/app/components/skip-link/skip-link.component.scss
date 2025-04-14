@@ -2,20 +2,15 @@
   position: absolute;
   color: black;
   top: 0;
-  left: 0;
+  left: -10000px;
   padding: 0.5rem 1rem;
   background-color: yellow;
   z-index: 100;
-  text-decoration: none;
   cursor: pointer;
-  transform: translateY(-100%);
-  transition: transform 0.2s ease-in-out;
-
-  &:hover {
-    box-shadow: 0 0 2px 0 black;
-  }
+  overflow: hidden;
 
   &:focus {
-    transform: translateY(0);
+    text-decoration: underline;
+    left: 0;
   }
 }
