@@ -1,3 +1,11 @@
-<button mat-button (click)="toggleCart()">
+<button
+  mat-button
+  (click)="toggleCart()"
+  [attr.aria-label]="
+    isInCart()
+      ? 'Remove photo &quot;' + storeItem.alt + '&quot; from shopping cart'
+      : 'Add photo &quot;' + storeItem.alt + '&quot; to shopping cart'
+  "
+>
   {{ isInCart() ? 'Remove from shopping cart' : 'Add to shopping cart' }}
 </button>

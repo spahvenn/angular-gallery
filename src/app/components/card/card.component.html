@@ -5,14 +5,18 @@
 >
   <span class="cart-text" (click)="openDialog()">In cart</span>
 </div>
-<button class="button" (click)="openDialog()">
+<button
+  class="button"
+  (click)="openDialog()"
+  [attr.aria-label]="'View details for ' + storeItem.alt + ' photo'"
+>
   <div class="image-wrapper">
     <img
       [ngSrc]="storeItem.imageName"
       width="1600"
       height="900"
       [sizes]="imgSizes"
-      [alt]="storeItem.season"
+      alt=""
       appFadeIn
       placeholder
     />

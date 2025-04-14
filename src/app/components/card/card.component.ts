@@ -34,6 +34,7 @@ export class CardComponent {
       maxWidth: '1200px',
       width: '100%',
       panelClass: 'image-dialog-container',
+      ariaLabel: this.storeItem.alt + ' image preview dialog',
     });
 
     dialogRef.afterClosed().subscribe(result => {
