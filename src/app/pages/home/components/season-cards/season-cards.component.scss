@@ -1,10 +1,12 @@
+@use 'styles/spacing' as *;
+
 .container {
   display: grid;
-  gap: 6px;
+  gap: spacing(0.75);
   grid-template-columns: repeat(2, 1fr);
 
   @media (min-width: 1024px) {
-    gap: 16px;
+    gap: spacing(2);
     grid-template-columns: repeat(4, 1fr);
   }
 }

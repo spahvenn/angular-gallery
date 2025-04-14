@@ -1,10 +1,12 @@
+@use 'styles/spacing' as *;
+
 .container {
-  padding-top: 56px;
-  margin-bottom: 4px;
+  padding-top: spacing(7);
+  margin-bottom: spacing(0.5);
 }
 
 .season-selector-container {
-  margin: 18px auto 12px auto;
+  margin: spacing(2.25) auto spacing(1.5) auto;
   max-width: 1200px;
-  padding: 0 24px;
+  padding: 0 spacing(3);
 }

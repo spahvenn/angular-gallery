@@ -1,4 +1,5 @@
 @use 'styles/typography' as type;
+@use 'styles/spacing' as *;
 
 :host {
   display: flex;
@@ -11,14 +12,14 @@
     0px 2px 1px -1px rgba(0, 0, 0, 0.2),
     0px 1px 1px 0px rgba(0, 0, 0, 0.14),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12);
-  border-radius: 0 0 4px 4px;
-  padding: 12px;
+  border-radius: 0 0 spacing(0.5) spacing(0.5);
+  padding: spacing(1.5);
   flex: 1;
   display: flex;
   flex-direction: column;
 
   @media (min-width: 600px) {
-    padding: 16px;
+    padding: spacing(2);
   }
 }
 
@@ -26,17 +27,17 @@ img {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 4px 4px 0 0;
+  border-radius: spacing(0.5) spacing(0.5) 0 0;
 }
 
 .title {
   font-size: type.px-to-rem(24);
-  margin: 0 0 12px;
+  margin: 0 0 spacing(1.5);
 }
 
 .description {
   display: none;
-  margin-bottom: 16px;
+  margin-bottom: spacing(2);
   flex: 1;
   @media (min-width: 600px) {
     display: block;
@@ -44,7 +45,7 @@ img {
 }
 
 .description-mobile {
-  margin-bottom: 16px;
+  margin-bottom: spacing(2);
   flex: 1;
   @media (min-width: 600px) {
     display: none;
@@ -52,7 +53,7 @@ img {
 }
 
 .button-container {
-  margin-bottom: 8px;
+  margin-bottom: spacing(1);
 }
 
 .view-gallery-link {

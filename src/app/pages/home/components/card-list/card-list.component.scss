@@ -1,7 +1,8 @@
+@use 'styles/spacing' as *;
+
 .card-grid {
   display: grid;
-  gap: 4px;
-
+  gap: spacing(0.5);
   grid-template-columns: repeat(2, 1fr);
 
   @media (min-width: 1024px) {
