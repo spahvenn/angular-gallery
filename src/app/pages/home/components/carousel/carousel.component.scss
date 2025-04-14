@@ -1,3 +1,5 @@
+@use 'styles/typography' as type;
+
 :host {
   display: flex;
   align-items: center;
@@ -43,7 +45,7 @@
 
   ::ng-deep {
     .mat-icon {
-      font-size: 32px;
+      font-size: type.px-to-rem(32);
       width: 32px;
       height: 32px;
       color: white;
@@ -52,7 +54,7 @@
       justify-content: center;
 
       @media (min-width: 600px) {
-        font-size: 48px;
+        font-size: type.px-to-rem(48);
         width: 48px;
       }
     }

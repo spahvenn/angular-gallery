@@ -1,3 +1,5 @@
+@use 'styles/typography' as type;
+
 header {
   z-index: 2;
   position: fixed;
@@ -27,7 +29,7 @@ a {
   display: block;
   text-decoration: none;
   color: white;
-  font-size: 20px;
+  font-size: type.px-to-rem(20);
   padding: 16px 8px 16px 8px;
 }
 

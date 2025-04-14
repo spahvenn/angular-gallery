@@ -1,0 +1,6 @@
+// Spacing system
+$spacing-unit: 8px !default;
+
+@function spacing($factor) {
+  @return ($spacing-unit * $factor);
+}

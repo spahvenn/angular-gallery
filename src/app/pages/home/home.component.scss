@@ -1,3 +1,5 @@
+@use 'styles/typography' as type;
+
 .container {
   max-width: 1200px;
   padding: 74px 24px 24px;
@@ -25,7 +27,7 @@
   padding: 26px 0 32px 0;
 
   h2 {
-    font-size: 36px;
+    font-size: type.px-to-rem(36);
     line-height: 1;
     margin: 0;
   }
@@ -33,7 +35,7 @@
   @media (max-width: 600px) {
     padding: 20px 0 24px 0;
     h2 {
-      font-size: 28px;
+      font-size: type.px-to-rem(28);
     }
   }
 }
