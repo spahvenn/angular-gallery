@@ -22,6 +22,15 @@
           ><span>Gallery</span></a
         >
       </li>
+      <li>
+        <a
+          routerLink="/about"
+          routerLinkActive="active-nav-item"
+          #rla3="routerLinkActive"
+          [attr.aria-current]="rla3.isActive ? 'page' : null"
+          ><span>About</span></a
+        >
+      </li>
       <li class="shopping-cart-container" routerLinkActive="active-nav-item">
         <app-header-shopping-cart></app-header-shopping-cart>
       </li>

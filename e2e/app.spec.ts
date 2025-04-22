@@ -30,3 +30,13 @@ test('Shopping cart page', async ({ page }) => {
   const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
   expect(accessibilityScanResults.violations).toEqual([]);
 });
+
+test('About page', async ({ page }) => {
+  await page.goto('/about');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle('Angular Gallery | About');
+
+  const accessibilityScanResults = await new AxeBuilder({ page }).analyze();
+  expect(accessibilityScanResults.violations).toEqual([]);
+});

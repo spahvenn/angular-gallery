@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { GalleryComponent } from './pages/gallery/gallery.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ShoppingCartComponent } from './pages/shopping-cart/shopping-cart.component';
+import { AboutComponent } from './pages/about/about.component';
 
 export const routes: Routes = [
   {
@@ -21,5 +22,10 @@ export const routes: Routes = [
     path: 'shopping-cart',
     title: 'Angular Gallery | Shopping Cart',
     component: ShoppingCartComponent,
+  },
+  {
+    path: 'about',
+    component: AboutComponent,
+    title: 'Angular Gallery | About',
   },
 ];
