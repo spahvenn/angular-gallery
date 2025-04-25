@@ -1,15 +1,21 @@
-<div class="toast-container">
+<div class="visually-hidden" role="status" aria-atomic="true">
+  {{ latestToastMessage }}
+</div>
+
+<section aria-label="Notification center" role="region" class="toast-container">
   @for (toast of toasts; track toast.id) {
-    <div class="toast" [ngClass]="['info', toast.exiting ? 'exit' : '']">
-      <button class="close-icon-button" style="" aria-label="Close" (click)="removeToast(toast)">
-        <mat-icon class="icon">close</mat-icon>
-      </button>
-      <p>{{ toast.message }}</p>
-      <div *ngIf="!isShoppingCartPage()">
-        <button mat-flat-button (click)="onGoToCartButtonClick()">
-          <mat-icon>east</mat-icon> Go to cart
+    <div role="group" aria-label="Notification">
+      <div class="toast" [ngClass]="['info', toast.exiting ? 'exit' : '']">
+        <button class="close-icon-button" aria-label="Close" (click)="removeToast(toast)">
+          <mat-icon class="icon">close</mat-icon>
         </button>
+        <p>{{ toast.message }}</p>
+        <div *ngIf="!isShoppingCartPage()">
+          <button mat-flat-button (click)="onGoToCartButtonClick()">
+            <mat-icon>east</mat-icon> Go to cart
+          </button>
+        </div>
       </div>
     </div>
   }
-</div>
+</section>

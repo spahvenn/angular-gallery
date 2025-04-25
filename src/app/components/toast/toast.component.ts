@@ -14,6 +14,9 @@ import { Router, RouterLink } from '@angular/router';
 })
 export class ToastComponent implements OnInit {
   toasts: Toast[] = [];
+  latestToastMessage = '';
+  // We need to make each msg text unique for screen readers to read them
+  toastUniqueMessage = '\u00A0';
 
   constructor(
     private toastService: ToastService,
@@ -23,6 +26,8 @@ export class ToastComponent implements OnInit {
   ngOnInit(): void {
     this.toastService.toast$.subscribe((toast: Toast) => {
       this.toasts.push(toast);
+      this.toastUniqueMessage += this.toastUniqueMessage;
+      this.latestToastMessage = toast.message + this.toastUniqueMessage;
     });
   }
 
