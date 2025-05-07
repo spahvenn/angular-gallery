@@ -7,6 +7,8 @@
   [alt]="storeItem.alt"
 />
 <mat-dialog-actions>
-  <button mat-button cdkFocusInitial (click)="onCloseClick()">Close</button>
+  <button mat-button cdkFocusInitial (click)="onCloseClick()" data-testid="dialog-close-button">
+    Close
+  </button>
   <app-shopping-cart-button [storeItem]="storeItem"></app-shopping-cart-button>
 </mat-dialog-actions>
