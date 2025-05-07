@@ -25,6 +25,9 @@ export class ToastComponent implements OnInit {
 
   ngOnInit(): void {
     this.toastService.toast$.subscribe((toast: Toast) => {
+      // Clear existing toasts before adding the new one
+      // For simplicity, let's use only one toast on screen at once fow now
+      this.toasts = [];
       this.toasts.push(toast);
       this.toastUniqueMessage += this.toastUniqueMessage;
       this.latestToastMessage = toast.message + this.toastUniqueMessage;
