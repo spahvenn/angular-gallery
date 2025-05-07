@@ -5,6 +5,8 @@ import { SeasonCardsComponent } from './components/season-cards/season-cards.com
 import { MatAnchor, MatButton } from '@angular/material/button';
 import { HeroCallToActionComponent } from './components/hero-call-to-action/hero-call-to-action.component';
 import { PageContainerComponent } from '../../layout/page-container/page-container.component';
+import { ActivatedRoute } from '@angular/router';
+import { Meta } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-home',
@@ -21,4 +23,16 @@ import { PageContainerComponent } from '../../layout/page-container/page-contain
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(
+    private route: ActivatedRoute,
+    private meta: Meta
+  ) {}
+
+  ngOnInit(): void {
+    const description = this.route.snapshot.data['meta']?.description;
+    if (description) {
+      this.meta.updateTag({ name: 'description', content: description });
+    }
+  }
+}

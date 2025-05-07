@@ -8,24 +8,27 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'Angular Gallery | Home',
+    title: 'Home | Angular Gallery',
+    data: {
+      meta: { description: 'Best seasonal images for all uses' },
+    },
   },
   {
     path: 'gallery',
-    title: 'Angular Gallery | Gallery',
+    title: 'Photo Gallery | Angular Gallery',
     children: [
       { path: '', component: GalleryComponent },
-      { path: ':season', title: 'Angular Gallery | Gallery', component: GalleryComponent },
+      { path: ':season', component: GalleryComponent },
     ],
   },
   {
     path: 'shopping-cart',
-    title: 'Angular Gallery | Shopping Cart',
+    title: 'Shopping Cart | Angular Gallery',
     component: ShoppingCartComponent,
   },
   {
     path: 'about',
     component: AboutComponent,
-    title: 'Angular Gallery | About',
+    title: 'About | Angular Gallery',
   },
 ];
