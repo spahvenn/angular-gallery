@@ -1,11 +1,11 @@
 <div class="prev-button-container">
-  <button class="prev-button" aria-label="Previous image" (click)="previous()">
+  <button class="prev-button" aria-label="Previous image" (click)="previous()" (focus)="onFocus()" (blur)="onBlur()">
     <mat-icon>chevron_left</mat-icon>
   </button>
 </div>
 
 <mat-card class="carousel-item">
-  <a [href]="slides[currentIndex].href">
+  <a [href]="slides[currentIndex].href" (focus)="onFocus()" (blur)="onBlur()">
     <img
       [ngSrc]="slides[currentIndex].img"
       alt="To gallery page"
@@ -18,7 +18,7 @@
 </mat-card>
 
 <div class="next-button-container">
-  <button class="next-button" aria-label="Next image" (click)="next()">
+  <button class="next-button" aria-label="Next image" (click)="next()" (focus)="onFocus()" (blur)="onBlur()">
     <mat-icon>chevron_right</mat-icon>
   </button>
 </div>

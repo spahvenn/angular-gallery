@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { MatCard } from '@angular/material/card';
 import { MatIcon } from '@angular/material/icon';
 import { NgOptimizedImage } from '@angular/common';
@@ -10,8 +10,10 @@ import { NgOptimizedImage } from '@angular/common';
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.scss',
 })
-export class CarouselComponent {
+export class CarouselComponent implements OnDestroy {
   currentIndex = 0;
+  private intervalId: ReturnType<typeof setInterval> | null = null;
+  private isFocused = false;
 
   slides = [
     { img: 'summer_jxiic8.jpg', title: 'Slide', description: '', href: 'gallery' },
@@ -36,9 +38,35 @@ export class CarouselComponent {
   ];
 
   ngOnInit() {
-    setInterval(() => {
-      this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+    this.startInterval();
+  }
+
+  ngOnDestroy() {
+    this.clearInterval();
+  }
+
+  private startInterval() {
+    this.clearInterval();
+    this.intervalId = setInterval(() => {
+      if (!this.isFocused) {
+        this.currentIndex = (this.currentIndex + 1) % this.slides.length;
+      }
     }, 5000);
+  }
+
+  private clearInterval() {
+    if (this.intervalId) {
+      clearInterval(this.intervalId);
+      this.intervalId = null;
+    }
+  }
+
+  onFocus() {
+    this.isFocused = true;
+  }
+
+  onBlur() {
+    this.isFocused = false;
   }
 
   next() {
