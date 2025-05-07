@@ -1,17 +1,23 @@
 <app-page-container>
-  <h2 class="visually-hidden">Browse seasonal collections and full photo gallery</h2>
+  <h2 class="visually-hidden">Browse seasonal collections and the full photo gallery</h2>
   <div class="hero-container">
-    <app-carousel></app-carousel>
+    <section aria-label="Seasons carousel">
+      <app-carousel></app-carousel>
+    </section>
     <app-hero-call-to-action></app-hero-call-to-action>
   </div>
   <div class="browse-text-area">
     <h2 aria-label="Browse photos by season">Browse by season</h2>
   </div>
-  <app-season-cards></app-season-cards>
+  <section class="container" aria-label="Season cards">
+    <app-season-cards></app-season-cards>
+  </section>
   <div class="browse-text-area">
     <h2 aria-label="Browse the whole photo collection">Browse the whole collection</h2>
   </div>
-  <app-card-list></app-card-list>
+  <section aria-label="Example photos grid">
+    <app-card-list></app-card-list>
+  </section>
   <div class="gallery-link-container">
     <a mat-flat-button href="/gallery" aria-label="Explore the gallery">EXPLORE THE GALLERY</a>
   </div>
