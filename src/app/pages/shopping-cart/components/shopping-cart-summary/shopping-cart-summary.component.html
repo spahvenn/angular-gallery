@@ -1,6 +1,7 @@
 <div class="container">
-  <p class="summary-line"> {{cartItems.length}} {{cartItems.length === 1 ? 'product' : 'products'}},
-    total <span class="total-amount">{{cartItems.length * 5}},00</span>
+  <p class="summary-line">
+    {{ cartItems.length }} {{ cartItems.length === 1 ? 'product' : 'products' }}, total
+    <span class="total-amount">{{ cartItems.length * 5 }},00 €</span>
   </p>
   <app-checkout-button></app-checkout-button>
 </div>
